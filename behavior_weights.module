@@ -1,10 +1,27 @@
 <?php
 
+/**
+ * @file
+ */
 
-function behavior_weights_init() {
-  backdrop_add_js(backdrop_get_path('module', 'behavior_weights') . '/js/behavior_weights.js');
+/**
+ * Implements hook_library_info().
+ */
+function behavior_weights_library_info() {
+  $libraries['behavior_weights'] = [
+    'title' => 'Behavior weights',
+    'website' => 'https://backdropcms.org/project/behavior_weights',
+    'version' => '1.x-1.0',
+    'js' => [
+      backdrop_get_path('module', 'behavior_weights') . '/js/behavior_weights.js' => [],
+    ],
+  ];
+  return $libraries;
 }
 
-
-
-
+/**
+ * Implements hook_init().
+ */
+function behavior_weights_init() {
+  backdrop_add_library('behavior_weights', 'behavior_weights', TRUE);
+}
