@@ -1,5 +1,5 @@
-
-name = "Behavior weights"
-description = "Allows to attach weights to your Drupal behaviors (javascript)."
+type = module
+name = Behavior weights
+description = Allows you to attach weights to your Backdrop behaviors (javascript).
 package = javascript
-core = 7.x
+backdrop = 1.x
